@@ -43,9 +43,9 @@ Small data: With limited labeled LARKS instances, regularization and freezing pr
 🔬 Example inference (python)
 ```python
 from src.model import LarksTransformer
-from src.dataset import TransformerDataset, vocab, DataLoader
+from src.dataset import TransformerDataset, Vocab, DataLoader
 import torch, numpy as np
-
+vocab=Vocab(sents)
 # load model
 model = LarksTransformer(...)
 model.load_state_dict(torch.load("checkpoints/best.pt"))
