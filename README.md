@@ -1,8 +1,8 @@
-# LARKS-Transformer
+# CEDRex
 
-**LARKS-Transformer** — a transformer-based predictor for LARKS (Low-complexity Aromatic-rich Kinked Segments) in protein sequences.
+**CEDRex** — a transformer-based predictor for CEDR (Low-complexity Aromatic-rich Kinked Segments) in protein sequences.
 
-This repository contains the model code, training & evaluation scripts, and example notebooks for the LARKS Transformer described in our work. The model predicts whether each residue in a protein sequence belongs to a LARKS segment.
+This repository contains the model code, training & evaluation scripts, and example notebooks for the CEDR Transformer described in our work. The model predicts whether each residue in a protein sequence belongs to a LARKS segment.
 
 ---
 
@@ -26,7 +26,7 @@ Requires Python 3.8+ and PyTorch (CUDA recommended for training). Example minima
 
 ```bash
 # optional: create env and install
-conda create -n larks python=3.8 -y
+conda create -n CEDR python=3.8 -y
 conda activate larks
 
 # install pytorch (choose appropriate CUDA version)
@@ -39,15 +39,15 @@ pip install numpy pandas scikit-learn
 
 Amino acids: Model trained on standard 20 amino acids + 3 tokens (bos/eos/pad). It cannot predict sequences with nonstandard residues or rare amino acids outside the 20 canonical ones.
 Input strategy: Using whole-protein input is convenient and lets structured (non-IDR) regions serve as negative examples, but if you have reliable IDR annotations, try both strategies (whole-protein vs IDR subsequence) — results differ subtly.
-Small data: With limited labeled LARKS instances, regularization and freezing pretrained embeddings help. You may consider data augmentation (motif shuffling, reverse complement of peptide sequences? — careful with biological plausibility), or weakly-supervised / semi-supervised approaches.
+Small data: With limited labeled CEDR instances, regularization and freezing pretrained embeddings help. You may consider data augmentation (motif shuffling, reverse complement of peptide sequences? — careful with biological plausibility), or weakly-supervised / semi-supervised approaches.
 🔬 Example inference (python)
 ```python
-from src.model import LarksTransformer
-from src.dataset import TransformerDataset, Vocab, DataLoader
+from .model import Transformer
+from .dataset import TransformerDataset, Vocab, DataLoader
 import torch, numpy as np
 vocab=Vocab(sents)
 # load model
-model = LarksTransformer(...)
+model = Transformer(...)
 model.load_state_dict(torch.load("checkpoints/best.pt"))
 model.eval()
 
@@ -66,5 +66,4 @@ print(pred.shape)
 📑 Citation
 
 If you use this repository / model in your work, please cite:
-Lipeng Li, HKLab. LARKS-Transformer: Transformer-based predictor for LARKS. GitHub repository. (Year).
-You may also cite the core papers related to ESM-2 if you use its embeddings.
+Lipeng Li, HKLab. Dynamic Secondary Structure Orchestrates Regulated Phase Separation and Synaptic Transmission. GitHub repository. (Year).
