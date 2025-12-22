@@ -51,6 +51,7 @@ git clone https://github.com/doublelipeng/CEDRex.git
 cd CEDRex
 git lfs pull
 ```
+Or manual download:
 [BERT model](https://drive.google.com/file/d/180MTlrSN5Stqo5B7HYfcCXDF8U1g-4xe/view?usp=drive_link) → place in `CEDRex/bertIDR1000/`
 
 Usage
