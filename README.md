@@ -68,8 +68,9 @@ Predict with only Transformer (whole protein or IDRs): please follow the readme 
 
 
 Output CSV columns:
+Ranges are **0-based**, with the **start position inclusive** and the **end position exclusive**.
 
-bert_cedr_range – predicted CEDR ranges by BERT (start inclusive, end exclusive)
+bert_cedr_range – predicted CEDR ranges by BERT
 
 trans_cedr_range – predicted CEDR ranges by Transformer
 
