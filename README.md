@@ -57,6 +57,7 @@ Or manual download:
 ---
 ## Usage
 Predict using both models:
+
 🔹 standard input
 ```
 echo "MKPGFSPRGGGFGGRGGFGDRGGRGGRGGF" | python compare_inference.py --stdin --device cpu
