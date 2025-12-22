@@ -66,7 +66,7 @@ echo "MKPGFSPRGGGFGGRGGFGDRGGRGGRGGF" | python compare_inference.py --stdin --de
 🔹 FASTA input
 ```bash
 python compare_inference.py \
-  --input transfomer1000/examples_test.fasta \
+  --input transformer1000/examples_test.fasta \
   --output result.csv \
   --device cpu 
 ```
@@ -74,7 +74,7 @@ python compare_inference.py \
 🔹 txt input（one sequence per line）
 ```bash
 python compare_inference.py \
-  --input transfomer1000/sequences.txt
+  --input transformer1000/sequences.txt
 ```
 
 Predict with only BERT (IDR regions): please follow the readme file in bertIDR1000
