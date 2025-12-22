@@ -33,13 +33,25 @@ CEDRex supports both whole-protein and IDR-based predictions under the following
 
 - Python ≥ 3.8  
 - PyTorch 2.0.1+cu117  choose appropriate version base on your computer
-- Biopython  
+- Biopython
+- Git LFS (for model files)  
 
+---
+
+## Model Files
+
+The pretrained models are large and managed with **Git LFS**:
+
+- `bert_maxlen1000_model_RoPE_state_dict.pt` → BERT-style Transformer for IDRs  
+
+**Download via Git LFS:**
 ```bash
 
 git clone https://github.com/doublelipeng/CEDRex.git
 cd CEDRex
+git lfs pull
 ```
+[BERT model](https://drive.google.com/file/d/180MTlrSN5Stqo5B7HYfcCXDF8U1g-4xe/view?usp=drive_link) → place in `CEDRex/bertIDR1000/`
 
 Usage
 Predict using both models:
