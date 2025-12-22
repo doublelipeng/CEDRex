@@ -66,15 +66,17 @@ Predict with only BERT (IDR regions): please follow the readme file in bertIDR10
 
 Predict with only Transformer (whole protein or IDRs): please follow the readme file in transfomer1000
 
-
+---
 Output CSV columns:
+
 Ranges are **0-based**, with the **start position inclusive** and the **end position exclusive**.
 
-bert_cedr_range – predicted CEDR ranges by BERT
+1.bert_cedr_range – predicted CEDR ranges by BERT
 
-trans_cedr_range – predicted CEDR ranges by Transformer
+2.trans_cedr_range – predicted CEDR ranges by Transformer
 
-overlap_range – intersection of the two predictions
+3.overlap_range – intersection of the two predictions
+---
 
 Citation
 
