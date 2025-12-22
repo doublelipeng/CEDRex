@@ -54,7 +54,8 @@ git lfs pull
 Or manual download:
 [BERT model](https://drive.google.com/file/d/180MTlrSN5Stqo5B7HYfcCXDF8U1g-4xe/view?usp=drive_link) → place in `CEDRex/bertIDR1000/`
 
-Usage
+---
+## Usage
 Predict using both models:
 🔹 standard input
 ```
@@ -80,7 +81,7 @@ Predict with only BERT (IDR regions): please follow the readme file in bertIDR10
 Predict with only Transformer (whole protein or IDRs): please follow the readme file in transfomer1000
 
 ---
-Output CSV columns:
+## Output CSV columns:
 
 Ranges are **0-based**, with the **start position inclusive** and the **end position exclusive**.
 
