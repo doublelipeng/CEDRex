@@ -70,7 +70,9 @@ Predict with only Transformer (whole protein or IDRs): please follow the readme 
 Output CSV columns:
 
 bert_cedr_range – predicted CEDR ranges by BERT (start inclusive, end exclusive)
+
 trans_cedr_range – predicted CEDR ranges by Transformer
+
 overlap_range – intersection of the two predictions
 
 Citation
