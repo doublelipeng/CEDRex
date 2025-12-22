@@ -65,7 +65,7 @@ echo "MKPGFSPRGGGFGGRGGFGDRGGRGGRGGF" | python compare_inference.py --stdin --de
 
 🔹 FASTA input
 ```bash
-python inference.py \
+python compare_inference.py \
   --input transfomer1000/examples_test.fasta \
   --output result.csv \
   --device cpu 
@@ -73,7 +73,7 @@ python inference.py \
 
 🔹 txt input（one sequence per line）
 ```bash
-python inference.py \
+python compare_inference.py \
   --input transfomer1000/sequences.txt
 ```
 
