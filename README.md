@@ -35,7 +35,9 @@ CEDRex supports both whole-protein and IDR-based predictions under the following
 - PyTorch 2.0.1+cu117  choose appropriate version base on your computer
 - Biopython
 - Git LFS (for model files)  
-
+- numpy
+- pandas
+- tqdm
 ---
 
 ## Model Files
