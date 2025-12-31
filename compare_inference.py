@@ -109,7 +109,7 @@ def main():
     #parser.add_argument("--transformer-checkpoint", required=True)
     parser.add_argument("--output", default="compare_output.csv")
     parser.add_argument("--device", default="cuda")
-    parser.add_argument("--min-length", type=int, default=4)
+    parser.add_argument("--min-length", type=int, default=2)
 
     args = parser.parse_args()
 
